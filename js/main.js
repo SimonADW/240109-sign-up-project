@@ -7,12 +7,37 @@ const phone = document.querySelector("#phone");
 const password1 = document.querySelector("#password1");
 const password2 = document.querySelector("#password2");
 
+const passwordMatchErrorMessage = document.querySelector(".password-error-message");
+const welcomeMessage = document.querySelector(".welcome-message");
+
 const passwordsMatch = ()=> {
 	return (password1.value === password2.value)
 }
 
+function CreateUserObject() {
+	this.firstName = firstName.value,
+	this.lastName = lastName.value,
+	this.email = email.value, 
+	this.phone = phone.value, 
+	this.password1 = password1.value,
+	this.welcomeUser = ()=> {
+		welcomeMessage.textContent = `Welcome onboard ${this.firstName}`;
+	};
+};
+
+const createAccount = (currentUserName)=> {	
+	let userName = currentUserName;
+	userName = new CreateUserObject();
+	userName.welcomeUser();
+}
 
 submitButton.addEventListener("click", ()=> {
-	console.log("no match");
-	
+	if(!passwordsMatch()) {
+		passwordMatchErrorMessage.classList.add("display-error-message");
+	} else {
+		createAccount(firstName.value);				
+
+	};	
 });
+
+

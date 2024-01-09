@@ -20,7 +20,7 @@ main {
 	height: 100vh;
 	flex-basis: 35%;
 	min-width: fit-content;
-	background-image: url(/assets/pawel-czerwinski-unsplash.jpeg);
+	background-image: url(../assets/pawel-czerwinski-unsplash.jpeg);
 	background-size: cover;	
 	display: flex;
 	flex-direction: column;
@@ -109,13 +109,19 @@ input:invalid {
 	
 }
 
-
 .password-error-message {
 	color: red;
 	font-size: 12px;
-	/* display: none; */
+	display: none;
 }
 
+.display-error-message {
+	display: block;
+}
+
+.welcome-message {
+	font-size: 1.5rem;	
+}
 
 
 /* Sub section */

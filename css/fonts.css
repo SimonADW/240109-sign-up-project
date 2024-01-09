@@ -1,10 +1,10 @@
 @font-face {
 	font-family: rust;
-	src: url(/assets/My_Fontspring_Fonts_Order_89737076/Web_Fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff2) format("woff2");
+	src: url(../assets/My_Fontspring_Fonts_Order_89737076/Web_Fonts/introrustg_base2line_macroman/introrustg-base2line-webfont.woff2) format("woff2");
 }
 
 @font-face {
 	font-family: introhead ;
-	src: url(/assets/My_Fontspring_Fonts_Order_89737076/Web_Fonts/introheadr_base_macroman/introheadr-base-webfont.woff2) format("woff2");	
+	src: url(../assets/My_Fontspring_Fonts_Order_89737076/Web_Fonts/introheadr_base_macroman/introheadr-base-webfont.woff2) format("woff2");	
 
 }
