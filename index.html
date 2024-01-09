@@ -5,19 +5,47 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sign Up</title>
 
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/main.js" defer></script>
 </head>
 <body>
-	<section class="banner">
-		<div class="logo"></div>
-	</section>
+	<main>		
+		<section class="banner">
+			<div class="logo">Awesome product</div>
+			<span class="photo-credit">Photo by Pawel-Czerwinski on <a href="https://unsplash.com/photos/a-close-up-of-a-black-and-gold-abstract-background-nKN1RH5eyhQ">Unsplash</a></span>
+		</section>
+		<section class="signup-section">
+			<div class="header">This is not a real online sevice! You know  you need something like this in your life to help you realize your dreams. <br>Sign up to get started!</div>
+			<div class="form-container">
+				Let's do this!
 
-	<section class="main-section">
-		<div class="header"></div>
-		<div class="form-container"></div>
-		<div class="sub-container"></div>
-	</section>
+				<form action="js/main.js">
+					<label for="firstname">First Name</label>
+					<input type="text" id="firstname">
 
+					<label for="lastname">Last Name</label>
+					<input type="text" id="lastname">
+
+					<label for="email">Email</label>
+					<input type="email" id="email">
+
+					<label for="phone">Phone number</label>
+					<input type="tel" id="phone">
+
+					<label for="password1">Password</label>
+					<input type="password" id="password1">
+		
+					<label for="password2">Confirm password</label>
+					<input type="password" id="password2">
+				</form>
+			</div>
+			<div class="sub-container">
+				<button type="submit">Create account</button>
+				<Span>Already have an account? <a href="">Sign in</a></Span>
+			</div>
+		</section>
+	</main>
 </body>
 </html>
