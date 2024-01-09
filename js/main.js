@@ -11,7 +11,7 @@ const passwordMatchErrorMessage = document.querySelector(".password-error-messag
 const welcomeMessage = document.querySelector(".welcome-message");
 
 const passwordsMatch = ()=> {
-	return (password1.value === password2.value)
+	return (password1.value !== "" && password1.value === password2.value)
 }
 
 function CreateUserObject() {
@@ -35,9 +35,8 @@ submitButton.addEventListener("click", ()=> {
 	if(!passwordsMatch()) {
 		passwordMatchErrorMessage.classList.add("display-error-message");
 	} else {
+		passwordMatchErrorMessage.classList.remove("display-error-message");
 		createAccount(firstName.value);				
 
 	};	
 });
-
-
