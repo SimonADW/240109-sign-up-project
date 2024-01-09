@@ -1,5 +1,6 @@
 body {
-	font-size: 16px;
+ 	font-size: 16px;
+	font-family: "introhead", sans-serif;
 }
 
 main {
@@ -46,6 +47,7 @@ main {
 	flex-flow: column nowrap;	
 	background: lightgrey;
 	flex: 1 0 auto;
+	padding: 10rem 2rem;
 }
 
 .form-container {
