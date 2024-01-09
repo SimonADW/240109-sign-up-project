@@ -49,7 +49,7 @@ main {
 
 /* Sign up section */
 
-.header {
+.header, .header+div{
 	margin-bottom: var(--spacing-medium);
 }
 
