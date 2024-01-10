@@ -29,12 +29,34 @@ const storeUserInLocalStorage = (userToStore)=> {
 	window.localStorage.setItem(userToStore.firstName, JSON.stringify(userToStore));
 }
 
+const checkIfUserExist = (email)=> {
+	for (let i = 0; i < localStorage.length; i++) {
+		const key = localStorage.key(i);	
+		
+		if (localStorage.getItem(key).includes(email)) {
+		  return true; 
+		}
+	}	
+	return false; 
+};
+
+const displayUserAlreadyExist = (userName)=> {
+	welcomeMessage.textContent = `User email is already registered`;
+}
+
+
 const createAccount = (currentUserName)=> {	
 	let userName = currentUserName;
 	userName = new CreateUserObject();
-	storeUserInLocalStorage(userName);
-	userName.welcomeUser();
+	if (checkIfUserExist(userName.email)){
+		displayUserAlreadyExist();
+	} else {
+		storeUserInLocalStorage(userName);
+		userName.welcomeUser();
+	}
 }
+
+
 
 submitButton.addEventListener("click", ()=> {
 	if(!passwordsMatch()) {
@@ -47,4 +69,3 @@ submitButton.addEventListener("click", ()=> {
 
 
 
-console.log();
