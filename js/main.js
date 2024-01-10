@@ -25,9 +25,14 @@ function CreateUserObject() {
 	};
 };
 
+const storeUserInLocalStorage = (userToStore)=> {
+	window.localStorage.setItem(userToStore.firstName, JSON.stringify(userToStore));
+}
+
 const createAccount = (currentUserName)=> {	
 	let userName = currentUserName;
 	userName = new CreateUserObject();
+	storeUserInLocalStorage(userName);
 	userName.welcomeUser();
 }
 
@@ -36,7 +41,10 @@ submitButton.addEventListener("click", ()=> {
 		passwordMatchErrorMessage.classList.add("display-error-message");
 	} else {
 		passwordMatchErrorMessage.classList.remove("display-error-message");
-		createAccount(firstName.value);				
-
+		createAccount(firstName.value);		
 	};	
 });
+
+
+
+console.log();
